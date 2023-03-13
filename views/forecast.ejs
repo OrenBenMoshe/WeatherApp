@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="forecast-page">
+        <h1>The current weather in <%= city %> is:</h1>
+        <div class="card">
+            <div class="card-title">
+                <p> <%= list[0].day %> </p>
+                <p> <%= list[0].date %> </p>
+            </div>
+            <img class="icon-image" src="<%= list[0].icon %>" alt="icon-image"/>
+            <p class="temperature"><%= list[0].temperature %> &#<%= list[0].tempSymbol %> </p>
+            <div class="card-info">
+                <div class="card-detail">
+                    <p>Description:</p>
+                    <p><%= list[0].description %></p>
+                </div>
+                <div class="card-detail">
+                    <p>Feel Like:</p>
+                    <p><%= list[0].feel_like %>&#<%= list[0].tempSymbol %></p>
+                </div>
+                <div class="card-detail">
+                    <p>Humidity:</p>
+                    <p><%= list[0].humidity %>%</p>
+                </div>
+                <div class="card-detail">
+                    <p>Wind Speed:</p>
+                    <p><%= list[0].wind_speed %></p>
+                </div>
+            </div>
+        </div>
+        <h2>The forecast for the following 4 days in <%= city %> at <%=time %> is:</h2>
+        <div class="forecast">
+            <%	for(var i = 1; i < list.length; i++){ %>
+                <div class="card">
+                    <div class="card-title">
+                        <p> <%= list[i].day %> </p>
+                        <p> <%= list[i].date %> </p>
+                    </div>
+                    <img class="icon-image" src="<%= list[i].icon %>" alt="icon-image"/>
+                    <p class="temperature"><%= list[i].temperature %> &#<%= list[i].tempSymbol %> </p>
+                    <div class="card-info">
+                        <div class="card-detail">
+                            <p>Description:</p>
+                            <p><%= list[i].description %></p>
+                        </div>
+                        <div class="card-detail">
+                            <p>Feel Like:</p>
+                            <p><%= list[i].feel_like %>&#<%= list[i].tempSymbol %></p>
+                        </div>
+                        <div class="card-detail">
+                            <p>Humidity:</p>
+                            <p><%= list[i].humidity %>%</p>
+                        </div>
+                        <div class="card-detail">
+                            <p>Wind Speed:</p>
+                            <p><%= list[i].wind_speed %></p>
+                        </div>
+                    </div>
+                </div>
+            <%	} %>
+        </div>
+    </div>
+</body>
+</html>

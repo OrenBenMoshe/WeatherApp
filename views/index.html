@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="holder">
+            <div class="title">
+                <h1>Welcome to my weather forecast</h1>
+            </div>
+            <div class="description">
+                As a frequent traveler, I am always interested in staying up to date on the weather forecast for my destination.
+                This is especially important when it comes to planning my outfits and packing for my trip. 
+                I want to be prepared for any unexpected weather changes and make sure that I have the right clothes and gear with me.
+            </div>
+            <div class="details">
+                <p>In this App you can get the weather for the next few days.</p>
+                <ul class="steps">
+                    <li>Enter a desirable city.</li>
+                    <li>Select the time segment.</li>
+                    <li>Choose between Fahrenheit/Celsius</li>
+                    <li>Click the button and get the data</li>
+                </ul>
+            </div>
+            <div class="input-data">
+                <form action="/" method="post">
+                    <label for="cityInput"> City Name: </label>
+                    <input id="cityInput" type="text" name="cityName" required autocomplete="off" spellcheck="false">
+                    <button type="submit">Get Data</button>
+                    <div class="timing">
+                        <label for="option1">Morning</label>
+                        <input type="radio" id="option1" name="options" value="09:00:00" required>
+                        <label for="option2">Non</label>
+                        <input type="radio" id="option2" name="options" value="12:00:00" required>
+                        <label for="option3">After-Non</label>
+                        <input type="radio" id="option3" name="options" value="15:00:00" required>
+                        <label for="option4">Evening</label>
+                        <input type="radio" id="option4" name="options" value="18:00:00" required>
+                        <label for="option5">Night</label>
+                        <input type="radio" id="option5" name="options" value="21:00:00" required>
+                    </div>
+                    <div class="units">
+                        <label for="Fahrenheit">Fahrenheit</label>
+                        <input type="radio" id="Fahrenheit" name="units" value="imperial" required>
+                        <label for="Celsius">Celsius</label>
+                        <input type="radio" id="Celsius" name="units" value="metric" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
